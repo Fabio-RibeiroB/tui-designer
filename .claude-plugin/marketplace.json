@@ -6,12 +6,11 @@
   "metadata": {
     "description": "A Claude Code plugin marketplace for designing professional Terminal UIs — research-grounded, keyboard-first, production-grade.",
     "version": "0.1.0",
-    "pluginRoot": "./plugins"
   },
   "plugins": [
     {
       "name": "tui-designer",
-      "source": "./tui-designer",
+      "source": "./plugins/tui-designer",
       "description": "Research-grounded TUI design skill. Transforms Claude into a senior TUI engineer that designs production-grade terminal interfaces inspired by lazygit, k9s, htop, and neovim.",
       "version": "0.1.0",
       "author": {
