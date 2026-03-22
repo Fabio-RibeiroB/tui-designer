@@ -4,39 +4,31 @@
 [![Version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/Fabio-RibeiroB/tui-designer/releases)
 [![License](https://img.shields.io/github/license/Fabio-RibeiroB/tui-designer)](LICENSE)
 
-A Claude Code plugin marketplace for designing and building professional Terminal UIs.
-
-## Overview
-
-This marketplace distributes the **TUI Builder** skill — a research-grounded Claude Code plugin that transforms Claude into a senior TUI engineer. Every design decision is grounded in a comprehensive research document covering the full TUI ecosystem, bundled directly with the skill.
-
-The skill produces designs that feel like:
-- **lazygit** — panel-driven, keyboard-first, fast
-- **k9s** — table-first data exploration, dense and navigable
-- **htop** — process-level density, mouse-assisted
-- **neovim** — modal, composable, deeply configurable
+A Claude Code plugin for designing Terminal UIs.
 
 ## Install
 
-```shell
-# Add this marketplace
-/plugin marketplace add Fabio-RibeiroB/tui-designer
+Run both commands in Claude Code:
 
-# Install the plugin
+```shell
+/plugin marketplace add Fabio-RibeiroB/tui-designer
 /plugin install tui-designer@tui-designer
 ```
 
-## What's included
+## Usage
 
-### TUI Builder Skill
+Once installed, ask Claude to design a TUI:
 
-Triggered when you ask to:
 - "Design a TUI for X"
 - "Build a terminal UI for my tool"
 - "Make this CLI feel like a modern dev tool"
 - "Design a dashboard like k9s"
 
-Produces a complete, research-backed design in 8 sections:
+Claude produces a design covering layout, keyboard interactions, components, colour system, tech stack recommendation, and an implementation plan.
+
+## What's included
+
+### TUI Builder Skill
 
 | # | Section | What you get |
 |---|---------|-------------|
@@ -49,44 +41,41 @@ Produces a complete, research-backed design in 8 sections:
 | 7 | Technology Recommendation | Justified stack (Rust/Go/Python/Node) |
 | 8 | Implementation Plan | Step-by-step build sequence and module structure |
 
-## Research Foundation
-
-The skill bundles a comprehensive research report covering:
-
-- **Ecosystem** — Ratatui, Bubble Tea, Textual, Ink, ncurses trade-offs
-- **Interaction design** — component catalogue, layout archetypes, keyboard patterns
-- **Visual design** — semantic token system, colour, typography, accessibility (WCAG AA)
-- **Performance** — diff-based rendering, TPS/FPS decoupling, SSH-safe presets
-- **Compatibility** — SSH, Windows/ConPTY, web terminals (xterm.js), CI
-- **Security** — terminal escape injection (CWE-150), sanitisation patterns
-
-## Marketplace Structure
+## Structure
 
 ```
 tui-designer/
   .claude-plugin/
-    marketplace.json              # Marketplace catalog
+    marketplace.json
   plugins/
     tui-designer/
       .claude-plugin/
-        plugin.json               # Plugin manifest
+        plugin.json
       skills/
         tui-builder/
-          SKILL.md                # Core skill — lean trigger + 8-section output spec
+          SKILL.md
           references/
-            deep-research-report.md       # Full bundled research (primary source)
-            library-comparison.md         # Framework trade-offs and selection guide
-            design-system.md              # Tokens, colour palettes, accessibility
-            interaction-patterns.md       # Components, layouts, keyboard patterns
-            performance-security.md       # Rendering, compatibility, CWE-150
-  README.md
+            deep-research-report.md
+            library-comparison.md
+            design-system.md
+            interaction-patterns.md
+            performance-security.md
 ```
 
-## Local Testing
+## Troubleshooting
+
+**Plugin fails to install after adding the marketplace**
+
+If you added the marketplace before v0.1.1, run an update first:
+
+```shell
+/plugin marketplace update tui-designer
+/plugin install tui-designer@tui-designer
+```
+
+**Local testing**
 
 ```shell
 /plugin marketplace add ./
 /plugin install tui-designer@tui-designer
 ```
-
-Then ask: *"Design a TUI for a Kubernetes resource explorer"*

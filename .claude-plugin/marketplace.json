@@ -4,14 +4,14 @@
     "name": "Fabio-RibeiroB"
   },
   "metadata": {
-    "description": "A Claude Code plugin marketplace for designing professional Terminal UIs — research-grounded, keyboard-first, production-grade.",
-    "version": "0.1.0",
+    "description": "A Claude Code plugin for designing Terminal UIs.",
+    "version": "0.1.0"
   },
   "plugins": [
     {
       "name": "tui-designer",
       "source": "./plugins/tui-designer",
-      "description": "Research-grounded TUI design skill. Transforms Claude into a senior TUI engineer that designs production-grade terminal interfaces inspired by lazygit, k9s, htop, and neovim.",
+      "description": "Helps Claude design terminal interfaces — layout, keyboard interactions, components, and tech stack.",
       "version": "0.1.0",
       "author": {
         "name": "Fabio-RibeiroB"
