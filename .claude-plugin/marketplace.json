@@ -1,21 +1,21 @@
 {
-  "name": "terminalui-design",
+  "name": "tui-designer",
   "owner": {
-    "name": "Fabio"
+    "name": "Fabio-RibeiroB"
   },
   "metadata": {
-    "description": "A marketplace for professional Terminal UI (TUI) design tools and skills. Provides research-grounded guidance for building fast, elegant, keyboard-first terminal applications.",
+    "description": "A Claude Code plugin marketplace for designing professional Terminal UIs — research-grounded, keyboard-first, production-grade.",
     "version": "0.1.0",
     "pluginRoot": "./plugins"
   },
   "plugins": [
     {
-      "name": "terminalui-design",
-      "source": "./terminalui-design",
+      "name": "tui-designer",
+      "source": "./tui-designer",
       "description": "Research-grounded TUI design skill. Transforms Claude into a senior TUI engineer that designs production-grade terminal interfaces inspired by lazygit, k9s, htop, and neovim.",
       "version": "0.1.0",
       "author": {
-        "name": "Fabio"
+        "name": "Fabio-RibeiroB"
       },
       "keywords": ["tui", "terminal", "cli", "design", "ratatui", "bubbletea", "textual", "ink"],
       "category": "design"

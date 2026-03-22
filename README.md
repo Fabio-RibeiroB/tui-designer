@@ -1,8 +1,8 @@
-# terminalui-design
+# tui-designer
 
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin%20Marketplace-8A2BE2?logo=anthropic&logoColor=white)](https://code.claude.com)
-[![Version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/Fabio-RibeiroB/terminalui-design/releases)
-[![License](https://img.shields.io/github/license/Fabio-RibeiroB/terminalui-design)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/Fabio-RibeiroB/tui-designer/releases)
+[![License](https://img.shields.io/github/license/Fabio-RibeiroB/tui-designer)](LICENSE)
 
 A Claude Code plugin marketplace for designing and building professional Terminal UIs.
 
@@ -20,10 +20,10 @@ The skill produces designs that feel like:
 
 ```shell
 # Add this marketplace
-/plugin marketplace add Fabio-RibeiroB/terminalui-design
+/plugin marketplace add Fabio-RibeiroB/tui-designer
 
 # Install the plugin
-/plugin install terminalui-design@terminalui-design
+/plugin install tui-designer@tui-designer
 ```
 
 ## What's included
@@ -63,11 +63,11 @@ The skill bundles a comprehensive research report covering:
 ## Marketplace Structure
 
 ```
-terminalui-design/
+tui-designer/
   .claude-plugin/
     marketplace.json              # Marketplace catalog
   plugins/
-    terminalui-design/
+    tui-designer/
       .claude-plugin/
         plugin.json               # Plugin manifest
       skills/
@@ -86,7 +86,7 @@ terminalui-design/
 
 ```shell
 /plugin marketplace add ./
-/plugin install terminalui-design@terminalui-design
+/plugin install tui-designer@tui-designer
 ```
 
 Then ask: *"Design a TUI for a Kubernetes resource explorer"*

@@ -1,12 +1,12 @@
-# terminalui-design plugin
+# tui-designer plugin
 
 Research-grounded TUI design skill for Claude Code. Transforms Claude into a senior TUI engineer that produces production-grade terminal interface designs, grounded in a comprehensive research report covering the full TUI ecosystem.
 
 ## Install
 
 ```shell
-/plugin marketplace add fabio/terminalui-design
-/plugin install terminalui-design@terminalui-design
+/plugin marketplace add Fabio-RibeiroB/tui-designer
+/plugin install tui-designer@tui-designer
 ```
 
 ## Usage

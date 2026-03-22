@@ -1,8 +1,8 @@
 {
-  "name": "terminalui-design",
+  "name": "tui-designer",
   "version": "0.1.0",
   "description": "Research-grounded TUI design skill. Transforms Claude into a senior TUI engineer that designs production-grade terminal interfaces inspired by lazygit, k9s, htop, and neovim.",
   "author": {
-    "name": "Fabio"
+    "name": "Fabio-RibeiroB"
   }
 }
