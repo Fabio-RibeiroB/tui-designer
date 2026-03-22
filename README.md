@@ -3,7 +3,6 @@
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin%20Marketplace-8A2BE2?logo=anthropic&logoColor=white)](https://code.claude.com)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue)](https://github.com/Fabio-RibeiroB/terminalui-design/releases)
 [![License](https://img.shields.io/github/license/Fabio-RibeiroB/terminalui-design)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/Fabio-RibeiroB/terminalui-design?style=flat)](https://github.com/Fabio-RibeiroB/terminalui-design/stargazers)
 
 A Claude Code plugin marketplace for designing and building professional Terminal UIs.
 
