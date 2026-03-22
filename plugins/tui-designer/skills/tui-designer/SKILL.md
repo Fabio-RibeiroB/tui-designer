@@ -1,5 +1,5 @@
 ---
-name: tui-builder
+name: tui-designer
 description: >
   This skill should be used when the user asks to "design a TUI", "build a terminal UI",
   "create a TUI for X", "improve this CLI into a TUI", "make this interface feel like a modern

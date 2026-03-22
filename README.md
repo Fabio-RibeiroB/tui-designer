@@ -52,7 +52,7 @@ tui-designer/
       .claude-plugin/
         plugin.json
       skills/
-        tui-builder/
+        tui-designer/
           SKILL.md
           references/
             deep-research-report.md

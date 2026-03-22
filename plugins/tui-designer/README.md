@@ -31,7 +31,7 @@ Claude produces a complete 8-section design document:
 ## What's bundled
 
 ```
-skills/tui-builder/
+skills/tui-designer/
   SKILL.md
   references/
     deep-research-report.md    # Full primary research
