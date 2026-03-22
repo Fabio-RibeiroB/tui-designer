@@ -1,0 +1,24 @@
+{
+  "name": "terminalui-design",
+  "owner": {
+    "name": "Fabio"
+  },
+  "metadata": {
+    "description": "A marketplace for professional Terminal UI (TUI) design tools and skills. Provides research-grounded guidance for building fast, elegant, keyboard-first terminal applications.",
+    "version": "0.1.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "terminalui-design",
+      "source": "./terminalui-design",
+      "description": "Research-grounded TUI design skill. Transforms Claude into a senior TUI engineer that designs production-grade terminal interfaces inspired by lazygit, k9s, htop, and neovim.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Fabio"
+      },
+      "keywords": ["tui", "terminal", "cli", "design", "ratatui", "bubbletea", "textual", "ink"],
+      "category": "design"
+    }
+  ]
+}
