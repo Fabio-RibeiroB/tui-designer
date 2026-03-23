@@ -92,31 +92,9 @@ border.overlay   #475569
 
 ---
 
-## Reference Light Theme Palette
+## Light Theme
 
-```
-fg.default       #0f172a
-fg.muted         #64748b
-fg.subtle        #94a3b8
-fg.inverse       #f8fafc
-fg.danger        #dc2626
-fg.warning       #d97706
-fg.success       #16a34a
-fg.info          #0284c7
-fg.accent        #4f46e5
-
-bg.base          #f8fafc
-bg.panel         #f1f5f9
-bg.overlay       #ffffff
-bg.selected      #e2e8f0
-bg.hovered       #dbeafe
-bg.input         #ffffff
-
-border.focused   #4f46e5
-border.inactive  #cbd5e1
-border.separator #e2e8f0
-border.overlay   #94a3b8
-```
+TUIs run on dark terminals in the overwhelming majority of cases. Implement a light theme only when explicitly required. The mapping principle: invert `fg` and `bg` roles, use darker variants of accent/status colours (higher chroma at lower brightness) to maintain contrast ratios against light backgrounds. All AA contrast requirements still apply — re-verify every token pair.
 
 ---
 

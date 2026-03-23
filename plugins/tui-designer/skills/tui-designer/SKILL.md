@@ -49,6 +49,7 @@ Reference files to consult:
 - **`references/design-system.md`** — Color tokens, accessibility, typography, icon system
 - **`references/interaction-patterns.md`** — Keyboard-first design, keymaps, components, layout patterns
 - **`references/performance-security.md`** — Rendering models, performance presets, terminal compatibility, security
+- **`references/configuration-state.md`** — Config persistence (XDG), signal handling, async data architecture, debugging
 
 ---
 
@@ -220,14 +221,15 @@ State the chosen stack, the primary reason, and one alternative with trade-offs.
 Produce a concrete step-by-step build plan.
 
 **Architecture layers** (always apply this structure):
-1. **Terminal setup** — raw mode, alternate screen, cleanup on exit
+1. **Terminal setup** — raw mode, alternate screen, cleanup on exit, panic hook to restore terminal
 2. **Event loop** — input decoder → normalised actions → state update → render
-3. **State model** — typed application state (model in MVU, struct in Ratatui)
-4. **Layout engine** — define panel constraints, focus manager, resize handler
-5. **Component layer** — reusable widgets with explicit states
-6. **Data layer** — async fetch, caching, background workers
-7. **Theme layer** — token-based style system
-8. **Safety layer** — sanitise untrusted input at data ingestion boundary
+3. **State model** — typed application state (model in MVU, struct in Ratatui); flat shape, derived state in View
+4. **Layout engine** — define panel constraints as ratios, focus manager, SIGWINCH proportional resize handler
+5. **Component layer** — reusable widgets with explicit states (loading / error / empty / default)
+6. **Data layer** — async fetch via background workers, channel messaging, TTL cache, request IDs to prevent races
+7. **Config layer** — XDG-compliant config file (TOML), layered merge, optional hot-reload
+8. **Theme layer** — token-based style system
+9. **Safety layer** — sanitise untrusted input at data ingestion boundary
 
 **Suggested module/file structure** — adapt to chosen language:
 ```
@@ -278,3 +280,4 @@ src/
 | `references/design-system.md` | Token system, colour palettes, accessibility, typography, icon registry |
 | `references/interaction-patterns.md` | Component catalogue, layout archetypes, keyboard patterns, exemplary TUIs |
 | `references/performance-security.md` | Rendering models, performance presets, terminal compatibility, CWE-150 security |
+| `references/configuration-state.md` | Config persistence (XDG), signal handling, async data patterns, debugging, state design |

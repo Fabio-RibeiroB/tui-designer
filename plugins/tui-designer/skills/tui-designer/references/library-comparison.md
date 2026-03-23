@@ -17,18 +17,25 @@ Every TUI sits on layered abstractions. Design decisions at each layer affect pe
 
 ## Full Comparison Table
 
+The five actively developed stacks worth recommending in new projects:
+
 | Library / Stack | Language | Level | Architecture | Strengths | Pitfalls |
 |----------------|----------|-------|-------------|-----------|---------|
 | **Ratatui + crossterm** | Rust | Widget library | Immediate-mode + double-buffer diff | Peak performance; safe text handling; strong ecosystem | Must manage full draw cycle; steeper learning curve |
 | **Bubble Tea + Bubbles** | Go | App framework | MVU (Init/Update/View) | Predictable state; testable; Charm ecosystem (Bubbles, Lip Gloss) | Requires disciplined state design |
 | **tcell + tview** | Go | Widget toolkit | Cell grid + widget tree | Rich built-in widgets (list, form, table); good for ops tools | Focus/composition complexity; less structured theming |
 | **Textual** | Python | App framework | Widget tree + asyncio + reactive attrs | Modern CSS-like styling; fastest iteration; excellent docs | Heavier runtime; async correctness required |
-| **prompt_toolkit** | Python | Framework | Layout + keybindings + styles | Excellent input editing; composable keybinding system | Complex for large apps |
-| **Rich** | Python | Renderables toolkit | Auto-refresh renderables | Beautiful tables/progress quickly | Not designed as a full-screen app framework |
 | **Ink** | Node | Framework | React renderer + Yoga/Flexbox | Familiar React model; Flexbox layout | Node runtime footprint; terminal edge cases |
-| **blessed + contrib** | Node | Widget toolkit | DOM-like elements | Fast dashboard prototyping | blessed is unmaintained; forks vary in quality |
-| **ncurses** | C | Screen abstraction | Terminal-independent + terminfo | Maximum portability; minimal redraws | Complex API; C safety burden |
-| **Urwid** | Python | Widget toolkit | Widget → canvas + main loop | Proven; fluid resizing | Older default aesthetic |
+
+### Legacy / Limited stacks — avoid for new projects
+
+| Library | Reason to avoid |
+|---------|----------------|
+| **blessed + blessed-contrib** (Node) | Unmaintained; use Ink instead |
+| **prompt_toolkit** (Python) | Excellent for REPLs and line-editing TUIs; not suited for full-screen multi-panel apps |
+| **Rich** (Python) | A renderables toolkit, not a full-screen app framework; use for pretty output in scripts, not TUIs |
+| **Urwid** (Python) | Proven but has older aesthetics and less active development; Textual supersedes it |
+| **ncurses / C** | The historical foundation everything builds on; only relevant if you're writing a C library or need maximum portability at the C level |
 
 ---
 
@@ -62,7 +69,7 @@ Every TUI sits on layered abstractions. Design decisions at each layer affect pe
 **Rendering model**: Retained widget tree with reactive attributes. Widgets respond to events via `on_*` handlers. Async rendering via asyncio tasks keeps the UI responsive.
 
 ### Choose Python + prompt_toolkit when:
-- Building a REPL-enhancement or an interactive shell
+- Building a REPL-enhancement or an interactive shell (not a full-screen multi-panel TUI)
 - Fine-grained keybinding composition is required
 - Mixing full-screen with line-editing modes
 - **Reference TUIs**: ptpython, pgcli, litecli
