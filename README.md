@@ -60,6 +60,7 @@ tui-designer/
             design-system.md
             interaction-patterns.md
             performance-security.md
+            configuration-state.md
 ```
 
 ## Troubleshooting

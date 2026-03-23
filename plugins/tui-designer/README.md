@@ -39,6 +39,7 @@ skills/tui-designer/
     design-system.md           # Tokens, colour, accessibility
     interaction-patterns.md    # Components, layouts, keyboard
     performance-security.md    # Rendering, compatibility, CWE-150
+    configuration-state.md     # Config persistence, signals, async data, debugging
 ```
 
 ## Reference TUIs
